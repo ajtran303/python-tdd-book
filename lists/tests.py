@@ -11,4 +11,4 @@ class HomePageTest(TestCase):
             response.content.decode()
         )
         self.assertTrue(response.content.decode().startswith('<html>'))
-        self.assertTrue(response.content.decode().endswith('</html>'))
+        self.assertTrue(response.content.decode().strip().endswith('</html>'))
